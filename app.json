@@ -1,12 +1,13 @@
 {
   "expo": {
-    "name": "type-lab",
+    "name": "Capy Pocket",
     "slug": "type-lab",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "ios": {
+      "bundleIdentifier": "rip.ami.capy.pocket",
       "supportsTablet": true
     },
     "android": {
