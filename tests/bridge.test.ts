@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { readFile } from 'node:fs/promises';
+import { URL as NodeURL } from 'node:url';
 import { chromium } from '@playwright/test';
 import { makePageBridge, makeViewportGuard } from '../src/pageBridge';
 import { isCapyUrl, parseColors, permittedNavigation } from '../src/policy';
@@ -104,7 +105,7 @@ test('live home backdrop and sidebar extend behind status bar while controls rem
   const browser = await chromium.launch({ headless: true });
   try {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
-    const html = await readFile(new URL('./edge-layout.html', import.meta.url), 'utf8');
+    const html = await readFile(new NodeURL('./edge-layout.html', import.meta.url), 'utf8');
     await page.route('https://capy.ai/**', route => route.fulfill({ contentType: 'text/html', body: html }));
     await page.goto('https://capy.ai/new');
     const messages: string[] = [];

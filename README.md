@@ -1,6 +1,6 @@
 # Capy Pocket
 
-Personal iPhone webview wrapper for https://capy.ai. Built with Expo SDK 57 and React Native WebView. Not an official Capy app.
+Personal iPhone webview wrapper for https://capy.ai. Built with Expo SDK 55 and React Native WebView. Not an official Capy app. SDK 55 supports Xcode 26+, including the owner's installed Xcode 26.1.1.
 
 ## Run on iPhone
 
@@ -10,7 +10,7 @@ npx expo login --browser
 npx expo start --tunnel
 ```
 
-Use Expo Go supporting SDK 57, signed into the same human Expo account as the CLI. Robot tokens cannot start Expo's ngrok tunnel. If an EXPO_TOKEN environment variable points to a robot, unset it for these commands so the browser-login session is used. Authentication credentials are not included in this project.
+Use an installed development build, or Expo Go supporting SDK 55. The current App Store Expo Go may not support this older SDK. Robot tokens cannot start Expo's ngrok tunnel. If an EXPO_TOKEN environment variable points to a robot, unset it for these commands so the browser-login session is used. Authentication credentials are not included in this project.
 
 ## Behavior
 
