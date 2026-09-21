@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Capy Pocket",
-    "slug": "type-lab",
+    "slug": "capy-pocket",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,6 +21,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c1f59d8d-c7ae-4498-b9a6-3db512c96a1c"
+      }
+    },
+    "owner": "tanvir_autumn"
   }
 }

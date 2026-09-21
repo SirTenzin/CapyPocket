@@ -23,6 +23,17 @@ Use Expo Go supporting SDK 57, signed into the same human Expo account as the CL
 - The browser input accessory bar is hidden. WebKit keyboard handling is retained; there is no KeyboardAvoidingView, forced scrolling, or page reload when system text size changes.
 - Injection and accepted color messages are restricted to the exact HTTPS capy.ai origin and the top frame. HTTPS auth pages remain unmodified. Only validated colors cross the native message bridge; no credentials or page text are read.
 
+## Native iOS builds
+
+The project is linked to `@tanvir_autumn/capy-pocket` on EAS. Before the first device build, configure Apple signing and ensure the intended iPhone is registered with the chosen Apple team.
+
+```
+npx eas-cli device:create
+npx eas-cli build --platform ios --profile development
+```
+
+The development profile includes `expo-dev-client` and needs a running development server (`npx expo start --dev-client --tunnel`). For a standalone app with the JavaScript bundle included and no development-server dependency, use `--profile preview` instead. Both profiles use internal distribution and require registered iPhones. Apple signing is not yet configured for this bundle ID.
+
 ## Validation
 
 ```
