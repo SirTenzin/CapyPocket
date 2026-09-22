@@ -2,6 +2,8 @@
 
 Personal iPhone webview wrapper for https://capy.ai. Built with Expo SDK 55 and React Native WebView. Not an official Capy app. SDK 55 supports Xcode 26+, including the owner's installed Xcode 26.1.1.
 
+The iOS app icon is rendered from Capy's official dark-mode favicon SVG at https://capy.ai/_marketing/favicon/favicon.svg, centered on an opaque black 1024×1024 canvas. The Capy logo belongs to its respective owner; its use here does not imply endorsement.
+
 ## Run on iPhone
 
 ```
